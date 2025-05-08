@@ -6,7 +6,7 @@ import I18nProvider from '../components/Switcher/LanguageSwitcher';
 import Footer from '../components/Footer';
 
 export const metadata = {
-  title: 'Tendy.Shop',
+  title: 'TendyShop',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
