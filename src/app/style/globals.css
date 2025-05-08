@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-roboto;
+  }
+
+  p,
+  a,
+  span,
+  li,
+  strong,
+  button {
+    @apply font-nunito;
+  }
+
+  ::placeholder {
+    @apply font-nunito;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out forwards;
+}
+
+.white-space-pre-line {
+  white-space: pre-line;
+}
+
+.price-range-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  pointer-events: auto;
+}
+
+.price-range-slider::-webkit-slider-runnable-track {
+  height: 0;
+  background: transparent;
+}
+
+.price-range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  z-index: 30;
+  margin-top: -7px;
+}
+
+.price-range-slider::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
