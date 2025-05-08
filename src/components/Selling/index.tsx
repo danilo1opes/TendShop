@@ -41,119 +41,175 @@ export default function Selling() {
 
   const products = [
     {
-      nameSelling: t('selling_name1'),
-      imageSelling: '/images/selling/Vertical.jpg',
+      name: t('selling_name1'),
+      image: '/images/selling/Vertical.jpg',
       rating: 5,
       price: 212,
       oldPrice: 232,
       discount: '-20%',
     },
     {
-      nameSelling: t('selling_name2'),
-      imageSelling: '/images/selling/Courage.jpg',
+      name: t('selling_name2'),
+      image: '/images/selling/Courage.jpg',
       rating: 4,
       price: 145,
     },
     {
-      nameSelling: t('selling_name3'),
-      imageSelling: '/images/selling/Loose.jpg',
+      name: t('selling_name3'),
+      image: '/images/selling/Loose.jpg',
       rating: 3,
       price: 80,
     },
     {
-      nameSelling: t('selling_name4'),
-      imageSelling: '/images/selling/Faded.jpg',
+      name: t('selling_name4'),
+      image: '/images/selling/Faded.jpg',
       rating: 4.5,
       price: 210,
     },
   ];
 
   return (
-    <section className="bg-brand-white py-1 px-4">
+    <section className="bg-brand-white py-10 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto">
       <div className="border-t mb-8 bg-brand-gray w-[90%] mx-auto" />
-      <div>
-        <h2 className="text-3xl font-bold text-center mb-8">{t('selling')}</h2>
+      <h2 className="text-3xl font-bold text-center mb-8 uppercase">
+        {t('selling')}
+      </h2>
 
-        {/* Products */}
-        <div className="overflow-x-auto">
-          <div className="flex gap-4 w-max">
-            {products.map((product, index) => {
-              return (
-                <div key={index} className="rounded-lg overflow-hidden mb-4">
-                  <Image
-                    src={product.imageSelling}
-                    alt={product.nameSelling}
-                    width={200}
-                    height={200}
-                    className="h-auto"
-                  ></Image>
-                  <h3>{product.nameSelling}</h3>
+      {/* Mobile: Horizontal scroll view */}
+      <div className="md:hidden overflow-x-auto">
+        <div className="flex gap-4 w-max">
+          {products.map((product, index) => (
+            <div key={index} className="w-60">
+              <div className="rounded-xl overflow-hidden mb-4 bg-gray-50">
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  width={240}
+                  height={240}
+                  className="h-auto w-full object-contain"
+                />
+              </div>
+              <h3 className="text-md font-semibold mb-1">{product.name}</h3>
 
-                  {/* Ratings */}
-                  <div>
-                    <div className="flex item-center text-sm mb-1">
-                      {Array.from({ length: 5 }, (_, i) => {
-                        const full = i + 1 <= Math.floor(product.rating);
-                        const half = i + 0.5 === product.rating;
+              {/* Ratings */}
+              <div className="flex items-center text-sm mb-1">
+                {Array.from({ length: 5 }, (_, i) => {
+                  const full = i + 1 <= Math.floor(product.rating);
+                  const half = i + 0.5 === product.rating;
 
-                        return (
-                          <span key={i} className="w-4 h-4 mr-1">
-                            {(full || half) && (
-                              <Image
-                                src={
-                                  full
-                                    ? '/icon/rating.svg'
-                                    : '/icon/rating-half.svg'
-                                }
-                                alt={t('rating_star')}
-                                width={16}
-                                height={16}
-                                className="w-4 h-4"
-                              ></Image>
-                            )}
-                          </span>
-                        );
-                      })}
-                      <span className="ml-2 text-brand-gray">
-                        {product.rating}/5
-                      </span>
-                    </div>
-
-                    {/* Prices */}
-                    <div className="flex items-center gap-2">
-                      <span className="font-bold text-lg">
-                        {isClient
-                          ? convertToCurrency(product.price)
-                          : `${language === 'pt' ? 'R$' : '$'} ${
-                              product.price
-                            }`}
-                      </span>
-                      {product.oldPrice && (
-                        <>
-                          <span className="line-through text-brand-old">
-                            {isClient
-                              ? convertToCurrency(product.oldPrice)
-                              : `${language === 'pt' ? 'R$' : '$'} ${
-                                  product.oldPrice
-                                }`}
-                          </span>
-                          <span className="text-brand-discont text-sm">
-                            {product.discount}
-                          </span>
-                        </>
+                  return (
+                    <span key={i} className="w-4 h-4 mr-1">
+                      {(full || half) && (
+                        <Image
+                          src={
+                            full ? '/icon/rating.svg' : '/icon/rating-half.svg'
+                          }
+                          alt={t('rating_star')}
+                          width={16}
+                          height={16}
+                          className="w-4 h-4"
+                        />
                       )}
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+                    </span>
+                  );
+                })}
+                <span className="ml-2 text-brand-gray">{product.rating}/5</span>
+              </div>
+
+              {/* Prices */}
+              <div className="flex items-center gap-2">
+                <span className="font-bold text-lg">
+                  {isClient
+                    ? convertToCurrency(product.price)
+                    : `${language === 'pt' ? 'R$' : '$'} ${product.price}`}
+                </span>
+                {product.oldPrice && (
+                  <>
+                    <span className="line-through text-brand-old">
+                      {isClient
+                        ? convertToCurrency(product.oldPrice)
+                        : `${language === 'pt' ? 'R$' : '$'} ${
+                            product.oldPrice
+                          }`}
+                    </span>
+                    <span className="text-brand-discont text-sm bg-red-100 px-2 rounded-full">
+                      {product.discount}
+                    </span>
+                  </>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
+      {/* Tablet/Desktop: Grid view */}
+      <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {products.map((product, index) => (
+          <div key={index} className="flex flex-col">
+            <div className="rounded-xl overflow-hidden mb-4 bg-gray-50">
+              <Image
+                src={product.image}
+                alt={product.name}
+                width={300}
+                height={300}
+                className="h-auto w-full object-contain"
+              />
+            </div>
+            <h3 className="text-md font-semibold mb-1">{product.name}</h3>
+
+            {/* Ratings */}
+            <div className="flex items-center text-sm mb-1">
+              {Array.from({ length: 5 }, (_, i) => {
+                const full = i + 1 <= Math.floor(product.rating);
+                const half = i + 0.5 === product.rating;
+
+                return (
+                  <span key={i} className="w-4 h-4 mr-1">
+                    {(full || half) && (
+                      <Image
+                        src={
+                          full ? '/icon/rating.svg' : '/icon/rating-half.svg'
+                        }
+                        alt={t('rating_star')}
+                        width={16}
+                        height={16}
+                        className="w-4 h-4"
+                      />
+                    )}
+                  </span>
+                );
+              })}
+              <span className="ml-2 text-brand-gray">{product.rating}/5</span>
+            </div>
+
+            {/* Prices */}
+            <div className="flex items-center gap-2">
+              <span className="font-bold text-lg">
+                {isClient
+                  ? convertToCurrency(product.price)
+                  : `${language === 'pt' ? 'R$' : '$'} ${product.price}`}
+              </span>
+              {product.oldPrice && (
+                <>
+                  <span className="line-through text-brand-old">
+                    {isClient
+                      ? convertToCurrency(product.oldPrice)
+                      : `${language === 'pt' ? 'R$' : '$'} ${product.oldPrice}`}
+                  </span>
+                  <span className="text-brand-discont text-sm bg-red-100 px-2 rounded-full">
+                    {product.discount}
+                  </span>
+                </>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+
       <div className="flex justify-center mt-8">
-        <button className="border px-6 py-2 rounded-full text-black hover:bg-black hover:text-white transition">
-          View All
+        <button className="border border-black px-6 py-2 rounded-full text-black hover:bg-black hover:text-white transition">
+          {t('view')}
         </button>
       </div>
     </section>
