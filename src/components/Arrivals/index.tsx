@@ -75,7 +75,7 @@ export default function Arrivals() {
   return (
     <section className="bg-brand-white py-10 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto">
       <h2 className="text-3xl font-bold text-center mb-8 uppercase">
-        New Arrivals
+        {t('new')}
       </h2>
 
       {/* Mobile: Horizontal scroll view */}
@@ -212,7 +212,7 @@ export default function Arrivals() {
 
       <div className="flex justify-center mt-8">
         <button className="border border-black px-6 py-2 rounded-full text-black hover:bg-black hover:text-white transition">
-          View All
+          {t('view')}
         </button>
       </div>
     </section>
