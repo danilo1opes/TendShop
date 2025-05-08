@@ -75,7 +75,7 @@
   "mens_small": "Esta camiseta gráfica é perfeita para qualquer ocasião. Confeccionada em tecido macio e respirável, oferece conforto e estilo superiores.",
   "selected_color": "Cor selecionada",
   "choose_size": "Escolha o tamanho",
-  "add_cart": "Add to Cart",
+  "add_cart": "Adicionar ao Carrinho",
   "sizes": {
     "small": "PP",
     "medium": "M",
@@ -136,5 +136,9 @@
   "delivery": "Taxa de entrega",
   "promo_cart": "Adicionar código promocional",
   "applyCart": "Aplicar",
-  "checkout": "Ir para Pagamento"
+  "checkout": "Ir para Pagamento",
+  "posted": "Publicado em",
+  "option_one": "Mais recente",
+  "option_two": "Classificação mais alta",
+  "option_three": "Classificação mais baixa"
 }
