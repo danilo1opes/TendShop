@@ -19,6 +19,7 @@ module.exports = {
           border: '#e5e7eb',
           sixteen: '#4B5563',
           seven: '#374151',
+          eight: '#1F2937',
           muted: '#f3f4f6',
           gray: '#6b7280',
           accent: '#3b82f6',

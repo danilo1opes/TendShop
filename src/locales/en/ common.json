@@ -136,5 +136,9 @@
   "delivery": "Delivery Fee",
   "promo_cart": "Add promo code",
   "applyCart": "Apply",
-  "checkout": "Go to Checkout"
+  "checkout": "Go to Checkout",
+  "posted": "Posted on",
+  "option_one": "Latest",
+  "option_two": "Highest Rating",
+  "option_three": "Lowest Rating"
 }
