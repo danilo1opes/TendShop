@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# E-Commerce | Tendy.Shop
 
-## Getting Started
+Este é um projeto de e-commerce moderno e responsivo voltado para moda masculina, desenvolvido com **Next.js**, **TypeScript** e **Tailwind CSS**. A aplicação possui suporte a múltiplos idiomas e conversão de moedas em tempo real, com design minimalista e foco na experiência do usuário.
 
-First, run the development server:
+## 🧠 Sobre o Projeto
+
+Este projeto foi **baseado em um design criado por [@hamzauix]**. Apenas a **logotipo foi alterada** para um nome mais **específico e único**, mantendo todo o mérito visual ao criador original do design.
+
+O desenvolvimento da aplicação completa — estrutura, lógica, integração de funcionalidades e responsividade — foi feito por mim **Danilo Lopes**.
+
+---
+
+## ✨ Funcionalidades
+
+- 🌍 **Internacionalização (i18n)** com suporte a múltiplos idiomas (`useTranslation`)
+- 🎨 **Seleção de cores e tamanhos** utilizado nos filtros
+- 💱 **Cálculo de preço automático com base no câmbio USD/BRL**, usando uma API de câmbio
+- 🖼️ **Galeria de imagens dinâmicas** para os produtos
+- ⭐ **Sistema de avaliações de usuários** com reviews
+- 🛒 **Botão de adicionar ao carrinho** (estrutura para lógica global de carrinho) - apenas demonstrativo
+- ⚡ Interface rápida e **responsiva**, pensada para desktop e mobile
+- 🧼 **Design minimalista e flat**, seguindo boas práticas de UI/UX
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [react-i18next](https://react.i18next.com/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- API de câmbio em tempo real (ex: [FetchDollar](https://economia.awesomeapi.com.br/json/last/USD-BRL))
+
+---
+
+## 🚀 Como Executar Localmente
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Clone o repositório
+git clone https://github.com/seu-usuario/seu-repo.git
+cd seu-repo
+
+# Instale as dependências
+pnpm install
+
+# Inicie o servidor de desenvolvimento
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📄 Licença
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Este projeto tem fins educacionais e pessoais. O design foi criado por @hamzauix, e os direitos de layout pertencem a ele. O código-fonte foi desenvolvido por Danilo Lopes.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🙋‍♂️ Autor
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Desenvolvido por Danilo Silva Lopes
+🔗 https://www.linkedin.com/in/danilo-1opes/
+📫 parceriasnyx@gmail.com
