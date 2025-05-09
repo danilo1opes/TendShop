@@ -44,7 +44,7 @@ export default function ShopNow() {
                   {t('hero_productsLabel')}
                 </p>
               </div>
-              <div className="col-span-2 md:col-span-1 text-center md:text-left border-l border-brand-black10 md:pl-4">
+              <div className="col-span-2 md:col-span-1 text-center md:text-left md:border-l border-brand-black10 md:pl-4">
                 <p className="text-xl sm:text-2xl font-bold text-brand-primary">
                   {t('hero_customersCount')}
                 </p>
