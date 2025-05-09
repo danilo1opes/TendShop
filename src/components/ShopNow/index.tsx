@@ -20,7 +20,7 @@ export default function ShopNow() {
               {t('hero_description')}
             </p>
             <Link
-              href="/"
+              href="/shop/homens"
               className="bg-brand-primary inline-flex items-center justify-center text-brand-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg transition hover:opacity-90 w-full sm:w-[280px] md:w-[350px] h-[45px] sm:h-[50px]"
             >
               {t('hero_shop')}
