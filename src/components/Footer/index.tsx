@@ -65,7 +65,11 @@ export default function Footer() {
 
               {/* Social Icons */}
               <div className="flex gap-4 mt-6">
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://x.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <div className="cursor-pointer h-8 w-8 flex items-center justify-center rounded-full border border-gray-500">
                     <Image
                       src="/icon/twitter.svg"
@@ -75,7 +79,11 @@ export default function Footer() {
                     />
                   </div>
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <div className="cursor-pointer h-8 w-8 flex items-center justify-center rounded-full border border-gray-500">
                     <Image
                       src="/icon/facebook.svg"
@@ -85,7 +93,11 @@ export default function Footer() {
                     />
                   </div>
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.instagram.com/danilo1opes/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <div className="cursor-pointer h-8 w-8 flex items-center justify-center rounded-full border border-gray-500">
                     <Image
                       src="/icon/instagram.svg"
@@ -95,7 +107,11 @@ export default function Footer() {
                     />
                   </div>
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://github.com/danilo1opes"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <div className="cursor-pointer h-8 w-8 flex items-center justify-center rounded-full border border-gray-500">
                     <Image
                       src="/icon/github.svg"
