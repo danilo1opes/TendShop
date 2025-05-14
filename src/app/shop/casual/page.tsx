@@ -100,13 +100,13 @@ export default function CausalPage() {
       oldPrice: 232,
       discount: '30%',
       name: t('selling_name1'),
-      image: '/images/selling/vertical.jpg',
+      image: '/images/selling/Vertical.jpg',
     },
     {
       rating: 4.0,
       price: 145,
       name: t('selling_name2'),
-      image: '/images/selling/courage.jpg',
+      image: '/images/selling/Courage.jpg',
     },
     {
       rating: 3.0,
